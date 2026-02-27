@@ -22,8 +22,7 @@ describe('GET /users', () => {
 //test
 
 // commenting 
-<<<<<<< Updated upstream
-=======
 
 // hiii
->>>>>>> Stashed changes
+
+// hi yo
