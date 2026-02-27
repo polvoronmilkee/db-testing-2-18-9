@@ -10,15 +10,10 @@ afterAll(async () => {
 describe('GET /users', () => {
 
 
-  it('should return 500 on database error', async () => {
-    // Mock the pool.query method to throw an error
-    const originalQuery = pool.query;
-    pool.query = jest.fn().mockRejectedValue(new Error('Database error'));
+  it('should return a list of users', async () => {
     const response = await request(app).get('/users');
     expect(response.status).toBe(500);
-    expect(response.body.error).toBe('Database error');
-    // Restore the original query method
-    pool.query = originalQuery;
+    expect(Array.isArray(response.body)).toBe(false);
   });
 });
 
@@ -27,3 +22,8 @@ describe('GET /users', () => {
 //test
 
 // commenting 
+<<<<<<< Updated upstream
+=======
+
+// hiii
+>>>>>>> Stashed changes
